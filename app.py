@@ -172,7 +172,7 @@ def question_detail(id):
 @app.route('/events')
 def events():
     events = Event.query.order_by(Event.date.desc()).all()
-    return render_template('events/list.html', events=events)
+    return render_template('list.html', events=events)
 
 @app.route('/admin/dashboard')
 @login_required
