@@ -55,14 +55,6 @@ AMP-Devs/
 ├── README.md             # This file
 ```
 
----
-
-## 📸 Screenshots
-
-(Add screenshots here of home page, alumni directory, profile dashboard, etc.)
-
----
-
 ## 🌱 MVP & Roadmap
 
 * ✅ User Login/Signup
