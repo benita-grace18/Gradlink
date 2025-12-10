@@ -73,6 +73,27 @@ AMP-Devs/
 
 ---
 
+## ⚠️ AI Integration (Developer preview)
+
+This project includes experimental AI features (RAG-based AskAlum, ATS resume scoring, and a DB-backed Mentor Compatibility Scorer). They are gated behind feature flags in `config/feature_flags.py`.
+
+- To enable features for local testing, update `app.config['FEATURE_FLAGS']` or set the flags in `config/feature_flags.py`.
+- Required (optional for dev): `OPENAI_API_KEY` environment variable for full RAG generation.
+- Recommended dev-only packages (don't commit secrets):
+
+```powershell
+# activate venv
+.\\venv\\Scripts\\Activate.ps1
+pip install openai faiss-cpu numpy scikit-learn pdfminer.six python-docx spacy pytest
+python -m spacy download en_core_web_sm
+```
+
+Notes:
+- The repository includes a dev-friendly in-memory RAG index and `scripts/import_advice.py` to seed it from sample advice.
+- The AI modules log and fail gracefully if optional dependencies are missing.
+- Do not store `OPENAI_API_KEY` in the repo. Use environment variables or a secrets manager.
+
+
 ## 📃 License
 
 Licensed under MIT. Free to use and extend.
