@@ -89,10 +89,10 @@ python -m spacy download en_core_web_sm
 ```
 
 Notes:
+
 - The repository includes a dev-friendly in-memory RAG index and `scripts/import_advice.py` to seed it from sample advice.
 - The AI modules log and fail gracefully if optional dependencies are missing.
 - Do not store `OPENAI_API_KEY` in the repo. Use environment variables or a secrets manager.
-
 
 ## 📃 License
 
