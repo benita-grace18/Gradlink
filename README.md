@@ -1,4 +1,3 @@
-
 # AMP-Devs – Alumni Connect Platform
 
 **AMP-Devs** is a Flask-based web platform that connects students with alumni for mentorship, networking, and career growth. Built to bridge the academic-to-career gap, the platform is designed with institutions and technical education in mind.
@@ -9,20 +8,20 @@
 
 ## 🚀 Features
 
-- 🔐 **Secure Login & Signup** for students and alumni  
-- 🧑‍💼 **Alumni Directory** with searchable filters  
-- 🧭 **Mentorship Matching** based on skills & interests  
-- 🗓️ **Event Scheduler** for webinars and reunions  
-- 💬 **Discussion Forums** for knowledge sharing  
+- 🔐 **Secure Login & Signup** for students and alumni
+- 🧑‍💼 **Alumni Directory** with searchable filters
+- 🧭 **Mentorship Matching** based on skills & interests
+- 🗓️ **Event Scheduler** for webinars and reunions
+- 💬 **Discussion Forums** for knowledge sharing
 - 📋 **Profile Dashboard** with personal insights
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Frontend:** HTML, CSS, Bootstrap  
-- **Backend:** Python, Flask  
-- **Database:** SQLite (`campus2career.db`)  
+- **Frontend:** HTML, CSS, Bootstrap
+- **Backend:** Python, Flask
+- **Database:** SQLite (`gradlink.db`)
 - **Hosting:** Render.com
 
 ---
@@ -36,7 +35,7 @@ python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 python app.py
-````
+```
 
 App runs locally at: `http://localhost:5000`
 
@@ -48,7 +47,7 @@ App runs locally at: `http://localhost:5000`
 AMP-Devs/
 ├── app.py                # Main Flask application
 ├── models.py             # Database models
-├── campus2career.db      # SQLite database
+├── gradlink.db      # SQLite database
 ├── templates/            # HTML templates (Jinja2)
 ├── static/               # CSS, JS, images
 ├── requirements.txt      # Required Python packages
@@ -57,11 +56,11 @@ AMP-Devs/
 
 ## 🌱 MVP & Roadmap
 
-* ✅ User Login/Signup
-* ✅ Alumni Listing & Filters
-* ✅ Mentor Match System
-* ⏳ Add chat or messaging (Next Update)
-* ⏳ Admin Controls (Phase 2)
+- ✅ User Login/Signup
+- ✅ Alumni Listing & Filters
+- ✅ Mentor Match System
+- ⏳ Add chat or messaging (Next Update)
+- ⏳ Admin Controls (Phase 2)
 
 ---
 
@@ -82,7 +81,7 @@ Licensed under MIT. Free to use and extend.
 
 ## 👨‍💻 Developer
 
-* **Lokesh Paneru**
+- **Lokesh Paneru**
   GitHub: [Techy-Play](https://github.com/Techy-Play)
   Project: [Alumni Connect (AMP-Devs)](https://alumniconnect-d7mo.onrender.com/)
 

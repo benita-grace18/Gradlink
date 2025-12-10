@@ -13,7 +13,7 @@ from extensions.ask_alum import ask_bp
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-secret-key-here'  # Change this to a secure key in production
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///campus2career.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///gradlink.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['FEATURE_FLAGS'] = FEATURE_FLAGS
 
@@ -40,7 +40,7 @@ def init_db():
         if not User.query.filter_by(role='admin').first():
             admin = User(
                 username='admin',
-                email='admin@campus2career.com',
+                email='admin@gradlink.com',
                 role='admin',
                 profile_image='@default.png'  # Set default profile image
             )
@@ -75,7 +75,7 @@ def login():
                 if not admin:
                     admin = User(
                         username='admin',
-                        email='admin@campus2career.com',
+                        email='admin@gradlink.com',
                         name='Administrator',
                         role='admin',
                         profile_image='images/default.png'  # Make sure this exists

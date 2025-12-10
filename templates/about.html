@@ -41,8 +41,12 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="{{ url_for('index') }}">
-          <i class="fas fa-graduation-cap"></i>
-          <span>Campus2Career</span>
+          <img
+            src="{{ url_for('static', filename='images/gradlink-logo.svg.svg') }}"
+            alt="Gradlink logo"
+            class="site-logo navbar-logo"
+          />
+          <span>Gradlink</span>
         </a>
         <button
           class="navbar-toggler"
@@ -76,6 +80,7 @@
               >
             </li>
           </ul>
+          <!-- htmlhint ul-li-parent-only:false -->
           <!-- htmlhint ul-li-parent-only:false -->
           <ul class="navbar-nav ms-auto">
             {% if current_user.is_authenticated %}
