@@ -61,8 +61,8 @@ huggingface-hub==0.29.1
 humanfriendly==10.0
 idna==3.10
 itsdangerous==2.2.0
-jax==0.4.30
-jaxlib==0.4.30
+jax==0.4.38
+jaxlib==0.4.38
 Jinja2==3.1.6
 jmespath==1.0.1
 joblib==1.4.2
@@ -81,7 +81,7 @@ ml_dtypes==0.5.1
 msgpack==1.1.0
 multidict==5.2.0
 networkx==2.6.3
-numpy==1.23.5
+numpy==1.26.4
 oauthlib==3.2.2
 opt_einsum==3.4.0
 packaging==20.9

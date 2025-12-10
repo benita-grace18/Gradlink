@@ -1,8 +1,10 @@
 {% extends "base.html" %} {% block content %}
 <h2>AskAlum (Demo)</h2>
 <form method="post">
+  <label for="query">Ask a career question:</label>
   <input
     type="text"
+    id="query"
     name="query"
     value="{{ query }}"
     placeholder="Ask a career question"
@@ -14,9 +16,11 @@
 {% if results %}
 <h3>Results</h3>
 <ul>
-  {% for r in results %}
-  <li><strong>{{ r.author }}</strong>: {{ r.content }}</li>
-  {% endfor %}
+  <template
+    >{%- for r in results %}
+    <li><strong>{{ r.author }}</strong>: {{ r.content }}</li>
+    {%- endfor %}</template
+  >
 </ul>
 {% elif query %}
 <p>No matches found. A real AskAlum would escalate this to mentors or RAG.</p>
