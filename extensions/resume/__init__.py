@@ -1,0 +1,10 @@
+from flask import Blueprint
+
+resume_bp = Blueprint(
+    'resume', __name__,
+    template_folder='templates',
+    static_folder='static',
+    url_prefix='/resume'
+)
+
+from . import views  # noqa

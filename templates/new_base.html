@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title or "GradLink Demo" }}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/new-theme.css') }}"
+    />
+  </head>
+  <body>
+    <header><h1>GradLink Demo Theme</h1></header>
+    <div class="card">{% block content %}{% endblock %}</div>
+    <footer>© GradLink Demo</footer>
+  </body>
+</html>

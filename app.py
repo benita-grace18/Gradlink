@@ -6,17 +6,27 @@ from datetime import datetime
 from models import db, User, Question, Answer, Event, Job
 import os
 from sqlalchemy import or_
+from config.feature_flags import FEATURE_FLAGS
+from extensions.resume import resume_bp
+from extensions.matching import mcs_bp
+from extensions.ask_alum import ask_bp
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-secret-key-here'  # Change this to a secure key in production
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///campus2career.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['FEATURE_FLAGS'] = FEATURE_FLAGS
 
 # Initialize extensions
 db.init_app(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
+
+# Register blueprints
+app.register_blueprint(resume_bp)
+app.register_blueprint(mcs_bp)
+app.register_blueprint(ask_bp)
 
 @login_manager.user_loader
 def load_user(user_id):

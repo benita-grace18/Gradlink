@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+<h2>AskAlum (Demo)</h2>
+<form method="post">
+  <input
+    type="text"
+    name="query"
+    value="{{ query }}"
+    placeholder="Ask a career question"
+    required
+  />
+  <button type="submit">Search</button>
+</form>
+
+{% if results %}
+<h3>Results</h3>
+<ul>
+  {% for r in results %}
+  <li><strong>{{ r.author }}</strong>: {{ r.content }}</li>
+  {% endfor %}
+</ul>
+{% elif query %}
+<p>No matches found. A real AskAlum would escalate this to mentors or RAG.</p>
+{% endif %} {% endblock %}
