@@ -1,10 +1,8 @@
 {% extends "base.html" %} {% block content %}
 <h2>MCS Recommendations (Demo)</h2>
 <ul>
-  <template
-    >{%- for r in recommendations %}
-    <li>{{ r.mentor.name }} — score: {{ r.score }}</li>
-    {%- endfor %}</template
-  >
+  {% for r in recommendations %}
+  <li><strong>{{ r.mentor.name }}</strong> — score: {{ r.score }}</li>
+  {% endfor %}
 </ul>
 {% endblock %}

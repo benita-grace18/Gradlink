@@ -1,8 +1,8 @@
+# extensions/ask_alum/views.py
 from flask import render_template, request, current_app
 from . import ask_bp
-# Import your DB models here, e.g. from app.models import Advice
-# For safe demo, we'll use a small in-memory list
 
+# Safe demo set; in production query DB table of verified alumni advice
 SAMPLE_ADVICE = [
     {'id':1, 'author':'Alumnus A', 'content':'Focus on internships and practical projects.'},
     {'id':2, 'author':'Alumnus B', 'content':'Learn Python and SQL for data roles.'},
@@ -19,6 +19,5 @@ def ask():
         query = request.form.get('query','').strip()
         if query:
             q = query.lower()
-            # Simple search: content contains q
             results = [r for r in SAMPLE_ADVICE if q in r['content'].lower() or q in r['author'].lower()]
     return render_template('ask/form.html', results=results, query=query)

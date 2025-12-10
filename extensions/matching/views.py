@@ -1,4 +1,5 @@
-from flask import render_template, request, current_app
+# extensions/matching/views.py
+from flask import render_template, current_app
 from . import mcs_bp
 from .mcs import mentor_compatibility_score
 

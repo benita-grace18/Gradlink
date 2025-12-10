@@ -14,10 +14,11 @@ def allowed_file(filename):
 
 def simple_ats_score(text, job_keywords=None):
     if job_keywords is None:
+        # sample default keywords tailored to your AIML focus
         job_keywords = ['python', 'machine learning', 'nlp', 'data', 'sql']
     txt = (text or "").lower()
     found = [kw for kw in job_keywords if kw.lower() in txt]
-    kf = len(found) / len(job_keywords)
+    kf = len(found) / len(job_keywords) if job_keywords else 0.0
     fs = 0.0
     for sect in ['education', 'experience', 'skills', 'projects']:
         if sect in txt:
@@ -29,14 +30,14 @@ def simple_ats_score(text, job_keywords=None):
     }
     return ar_score, feedback
 
-# Minimal text extractor stub. Replace with pdfminer / python-docx as needed.
+# Minimal text extractor stub. Replace with pdfminer / python-docx for production.
 def extract_text_from_file(path):
     try:
         ext = path.rsplit('.',1)[1].lower()
-        if ext in ('txt',):
+        if ext == 'txt':
             with open(path, 'r', encoding='utf-8', errors='ignore') as f:
                 return f.read()
-        # For now, return filename if we can't parse — safe fallback
+        # For unsupported formats in this stub, return empty string
         return ""
     except Exception:
         return ""
