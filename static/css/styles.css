@@ -11,3 +11,48 @@
   margin: 8px 0;
   border-radius: 4px;
 }
+
+/* Login Page Styles */
+.login-header {
+  align-content: center;
+  background-color: grey;
+  color: aliceblue;
+}
+
+.login-title {
+  font-size: 300%;
+}
+
+.div3 {
+  background-color: #2a3da5;
+  padding: 50%;
+}
+
+.div4 {
+  background-color: #a52a2a;
+  padding: 50%;
+}
+
+/* Profile Image Styles */
+.profile-img-card {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+}
+
+.profile-dropdown-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+/* Search Button */
+.search-btn {
+  color: inherit;
+}
+
+.search-btn:hover {
+  background-color: transparent;
+}
