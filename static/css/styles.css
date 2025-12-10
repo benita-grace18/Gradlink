@@ -1,0 +1,13 @@
+/* MCS Recommendations List Items */
+.mcs-recommendation-item {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+/* AskAlum Results List Items */
+.ask-alum-result-item {
+  padding: 12px;
+  border: 1px solid #ddd;
+  margin: 8px 0;
+  border-radius: 4px;
+}

@@ -7,6 +7,7 @@ This feature branch (`feat/gradlink-safe-additions`) adds **four isolated, non-i
 ### What's Included
 
 #### 1. **Resume Upload & ATS Analysis** (`/resume/`)
+
 - Upload resumes (PDF, DOCX, DOC, TXT)
 - Simple ATS-like scoring (60% keyword matching + 40% section detection)
 - Feedback on missing sections and keywords
@@ -14,6 +15,7 @@ This feature branch (`feat/gradlink-safe-additions`) adds **four isolated, non-i
 - **Feature Flag**: `FEATURE_RESUME_UPLOAD`
 
 #### 2. **Mentor Compatibility Scoring (MCS)** (`/mcs/recommend`)
+
 - Content similarity scoring (cosine similarity via numpy/sklearn)
 - Logistical feasibility (timezone + availability matching)
 - Collaborative filtering (historical match quality)
@@ -22,12 +24,14 @@ This feature branch (`feat/gradlink-safe-additions`) adds **four isolated, non-i
 - **Feature Flag**: `FEATURE_MCS`
 
 #### 3. **AskAlum - Career Advice Search** (`/ask/`)
+
 - Simple full-text search across alumni advice
 - Extensible to DB queries (currently in-memory demo data)
 - **Route**: `GET/POST /ask/`
 - **Feature Flag**: `FEATURE_ASK_ALUM`
 
-#### 4. **New Theme (Optional CSS)** 
+#### 4. **New Theme (Optional CSS)**
+
 - Modern design with card-based layout
 - Segoe UI typography, subtle shadows
 - **Template**: `templates/new_base.html`
@@ -48,14 +52,14 @@ extensions/
     templates/resume/
       upload.html                  # Upload form
       result.html                  # Analysis results
-  
+
   matching/
     __init__.py                    # Blueprint definition
     mcs.py                         # Scoring algorithms
     views.py                       # Recommendation route
     templates/mcs/
       recommend.html               # Demo results page
-  
+
   ask_alum/
     __init__.py                    # Blueprint definition
     views.py                       # Search logic
@@ -136,6 +140,7 @@ app.register_blueprint(ask_bp)
 - scikit-learn
 
 Install with:
+
 ```powershell
 .\venv\Scripts\python.exe -m pip install numpy scikit-learn
 ```
@@ -180,24 +185,28 @@ git checkout main
 ## Future Enhancements
 
 ### Resume Upload
+
 - [ ] PDF/DOCX text extraction (pdfminer, python-docx)
 - [ ] DB storage of resume metadata
 - [ ] Job matching against postings
 - [ ] User profile integration
 
 ### MCS
+
 - [ ] Load student/mentor vectors from DB
 - [ ] Real historical match data
 - [ ] A/B testing on weighting (alpha, beta, gamma)
 - [ ] API for integration with matching dashboard
 
 ### AskAlum
+
 - [ ] Query DB table of verified alumni advice
 - [ ] RAG (Retrieval-Augmented Generation) fallback
 - [ ] Upvoting/rating of answers
 - [ ] Escalation to mentors for unanswered questions
 
 ### Theme
+
 - [ ] Conditional inclusion in `base.html` via feature flag
 - [ ] Dark mode variant
 - [ ] Accessibility audit (WCAG 2.1 AA)

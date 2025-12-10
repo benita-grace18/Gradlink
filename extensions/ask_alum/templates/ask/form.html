@@ -14,11 +14,13 @@
 </form>
 {% if results %}
 <h3>Results</h3>
-<ul>
+<div role="list">
   {% for r in results %}
-  <li><strong>{{ r.author }}</strong>: {{ r.content }}</li>
+  <div role="listitem" class="ask-alum-result-item">
+    <strong>{{ r.author }}</strong>: {{ r.content }}
+  </div>
   {% endfor %}
-</ul>
+</div>
 {% elif query %}
 <p>No matches found. A real AskAlum would escalate this to mentors or RAG.</p>
-{% endif %} {% endblock %} {% endif %} {% endblock %} {% endif %} {% endblock %}
+{% endif %} {% endblock %}

@@ -1,0 +1,21 @@
+{
+  "tag-pair": false,
+  "tagname-lowercase": true,
+  "attr-lowercase": true,
+  "attr-value-double-quotes": true,
+  "doctype-first": true,
+  "empty-tag-pair": true,
+  "html-lang-require": false,
+  "id-class-ad-disabled": true,
+  "id-unique": true,
+  "spec-char-escape": true,
+  "src-not-empty": true,
+  "title-require": true,
+  "head-script-disabled": true,
+  "style-disabled": false,
+  "inline-style-disabled": false,
+  "inline-script-disabled": false,
+  "attr-unsafe-chars": true,
+  "ul-li-parent-only": false,
+  "ol-li-parent-only": false
+}
